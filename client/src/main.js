@@ -1,10 +1,20 @@
  
 var camera = new Camera();
-var canvas; 
+const canvas = document.getElementById("mainCanvas"); 
+const ctx = canvas.getContext("2d");
+
+const image = new Image(60, 60); 
+image.onload = drawImageActualSize; 
+ 
+image.src = "src/img/ship1.png"; 
+
+function drawImageActualSize() {  
+    ctx.imageSmoothingEnabled = false;
+    ctx.drawImage(this, 0, 0, this.width, this.height);  
+}
 
 function init()
-{
-    canvas = document.getElementById("mainCanvas");
+{ 
     canvas.width = document.body.clientWidth; // document.width is obsolete
     canvas.height = document.body.clientHeight; // document.height is obsolete
     canvasW = canvas.width;
@@ -14,9 +24,7 @@ function init()
 }
 
 function setup() {
-    // Your setup code goes here
-    console.log(camera.getPosition().getX());
-    console.log(document.body.clientHeight);
+    // Your setup code goes here  
 }
 
 function run() {

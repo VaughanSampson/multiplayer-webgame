@@ -9,5 +9,7 @@ class Entity {
         return this.position;
     }
 
-    
+    render (canvas, camera) {
+
+    }
 }

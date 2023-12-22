@@ -1,6 +1,5 @@
-import { Camera } from "./camera";
-
-var camera = new camera();
+ 
+var camera = new Camera();
 var canvas; 
 
 function init()
@@ -16,7 +15,7 @@ function init()
 
 function setup() {
     // Your setup code goes here
-    console.log(camera.getPosition.getX());
+    console.log(camera.getPosition().getX());
     console.log(document.body.clientHeight);
 }
 

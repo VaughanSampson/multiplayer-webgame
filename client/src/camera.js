@@ -1,10 +1,5 @@
-import Position from "./position";
-
-export class Camera{
-    constructor(position){
-        this.position = position;
-    }
-    
+ 
+class Camera{ 
     constructor(){
         this.position = new Position(0,0);
     } 
